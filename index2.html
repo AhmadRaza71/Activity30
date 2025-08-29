@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validator</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; text-align: center;">
+    <p>Enter a number and click ok:</p>
+    <input id="id1" type="number" min="100" max="300" required style="padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-right: 10px; width: 200px;">
+    <button onclick="myFunction()" style="padding: 10px 20px; border-radius: 5px; border: none; background-color: #5cb85c; color: white; cursor: pointer;">OK</button>
+    <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+    <p id="result" style="color: #d9534f; font-weight: bold; margin-top: 15px;"></p>
+    <script>
+        function myFunction() {
+            var inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("result").innerHTML = "Input OK";
+            }
+        }
+    </script>
+</body>
+</html>

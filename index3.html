@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body style="font-family: 'Open Sans', sans-serif; background-color: #f4f4f4; text-align: center; padding: 20px;">
+    <div class="wrapper" style="max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <div class="container">
+            <h1 style="font-size: 24px; margin-bottom: 20px;">Calculator</h1>
+            <div class="row">
+                <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;" />
+                <input type="button" value="+" onclick="setScreenValue('+')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="1" onclick="setScreenValue('1')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="2" onclick="setScreenValue('2')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="3" onclick="setScreenValue('3')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="-" onclick="setScreenValue('-')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+            </div>
+            <div class="row">
+                <input type="button" value="4" onclick="setScreenValue('4')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="5" onclick="setScreenValue('5')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="6" onclick="setScreenValue('6')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="x" onclick="setScreenValue('*')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+            </div>
+            <div class="row">
+                <input type="button" value="7" onclick="setScreenValue('7')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="8" onclick="setScreenValue('8')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="9" onclick="setScreenValue('9')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="/" onclick="setScreenValue('/')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+            </div>
+            <div class="row">
+                <input type="button" value="%" onclick="setScreenValue('%')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="0" onclick="setScreenValue('0')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="." class="dot" onclick="setScreenValue('.')" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+                <input type="button" value="=" onclick="calculateResult()" style="padding: 10px; margin: 5px; border: none; background-color: #5cb85c; color: white; border-radius: 5px; cursor: pointer;" />
+            </div>
+            <div class="row">
+                <input type="button" value="CLEAR" onclick="clearScreen()" id="clear" class="clear-button" style="padding: 10px; margin: 5px; border: none; background-color: #d9534f; color: white; border-radius: 5px; cursor: pointer;" />
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
